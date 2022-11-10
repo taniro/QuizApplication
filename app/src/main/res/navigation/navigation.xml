@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/fragmentPergunta1"
         android:name="tads.eaj.ufrn.quizapplication.FragmentPergunta1"
-        android:label="fragment_pergunta1"
-        tools:layout="@layout/fragment_pergunta1" >
+        android:label="Pergunta 1"
+        tools:layout="@layout/fragment_pergunta1">
         <action
             android:id="@+id/action_fragmentPergunta1_to_fragmentPergunta2"
             app:destination="@id/fragmentPergunta2" />
@@ -17,19 +17,33 @@
     <fragment
         android:id="@+id/fragmentPergunta2"
         android:name="tads.eaj.ufrn.quizapplication.FragmentPergunta2"
-        android:label="fragment_pergunta2"
-        tools:layout="@layout/fragment_pergunta2" >
+        android:label="Pergunta 2"
+        tools:layout="@layout/fragment_pergunta2">
         <action
             android:id="@+id/action_fragmentPergunta2_to_fragmentResultado"
             app:destination="@id/fragmentResultado" />
+        <argument
+            android:name="id"
+            app:argType="float" />
     </fragment>
     <fragment
         android:id="@+id/fragmentResultado"
         android:name="tads.eaj.ufrn.quizapplication.FragmentResultado"
-        android:label="fragment_resultado"
-        tools:layout="@layout/fragment_resultado" >
+        android:label="Resultado"
+        tools:layout="@layout/fragment_resultado">
         <action
             android:id="@+id/action_fragmentResultado_to_fragmentPergunta1"
             app:destination="@id/fragmentPergunta1" />
+        <argument
+            android:name="result"
+            app:argType="integer" />
+        <argument
+            android:name="nome"
+            app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/sobreFragment"
+        android:name="tads.eaj.ufrn.quizapplication.SobreFragment"
+        android:label="fragment_sobre"
+        tools:layout="@layout/fragment_sobre" />
 </navigation>
